@@ -113,7 +113,6 @@
 					</section>
 
 
-				<!-- Three -->
 					<section id="three" class="wrapper style3 special">
 						<div class="inner">
 							<header class="major">
@@ -127,26 +126,44 @@
 								</li>
 								<li class="icon fa-laptop">
 									<h3>Node js + Maria DB</h3>
-									<p>Node js를 통해 비동기로 </p>
+									<p>Node js를 통해 클라이언트와 비동기 통신을 수행하였고, 클라이언트 정보를 공유하기 위해 Maria DB에 저장하였습니다.</p>
 								</li>
 								<li class="icon fa-code">
-									<h3>Mus Scelerisque</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+									<h3>Firebase</h3>
+									<p>Firebase Admin, Firebase Cloud Messaging 등을 사용하였습니다.</p>
 								</li>
 								<li class="icon fa-headphones">
-									<h3>Mauris Imperdiet</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+									<h3>Retrofit2 + Gson</h3>
+									<p>Http통신을 위해 사용했습니다. </p>
 								</li>
 								<li class="icon fa-heart-o">
-									<h3>Aenean Primis</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+									<h3>Glide + Palette</h3>
+									<p>Youtube 서버에서 받은 이미지 url을 Glide로 로드하였고 Palette로 색을 추출하였습니다.</p>
 								</li>
 								<li class="icon fa-flag-o">
-									<h3>Tortor Ut</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+									<h3>Event Bus</h3>
+									<p>Firebase 서버에서 받은 메세지를 Event Bus를 통해 전송하였습니다. </p>
 								</li>
 							</ul>
 						</div>
+					</section>
+					
+					<section id="two" class="wrapper alt style2">
+						<section class="inner">
+							<div class="content">
+								<h2 align="center"> TROUBLE SHOOTING<br /><br />
+								</h2>
+								<p > 이미지 url 로딩 이슈 <br /><br />
+								youtube서버에서 영상 이미지 url을 가져와 Palette로 색을 추출할때, 처음에는 HttpURLConnection으로 이미지를 가져와
+								bitmap으로 컨버터하여 palette를 추출하였습니다. 이때, 갱신할때마다 로딩시간이 약 4초이상 걸렸고 유저입장에서 불편할 수 밖에 없는 문제 였습니다. 
+								<br /><br />해결<br /> 
+								Glide를 이용해 이미지 로딩하였더니 Glide가 이미지를 캐싱 및 리사이즈하여 메모리사용량이 줄어들고 시간도 단축되었습니다. <br /> <br />
+								</p>
+                                <p > 동영상 동기화 이슈 <br /><br />
+                                공유방을 생성하여 함께 영상을 볼때, 방에 참여한 사용자간의 싱크문제 
+                                <br /><br />해결<br /> Firebase Cloud Messaging을 통해 싱크문제 최소화<br /><br /></p>
+							</div>
+						</section>
 					</section>
 
 				<!-- CTA -->

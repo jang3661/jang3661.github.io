@@ -15,8 +15,9 @@
 		display: block;
 
 		.image {
+            @include padding(4em, 4em);
 			display: inline-block;
-			vertical-align: top;
+			
 		}
 
 		.content {
